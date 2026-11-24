@@ -1,0 +1,153 @@
+/* Reset básico e Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletor de Tag: Estilos globais e tipografia */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f1f5f9;
+}
+
+/* ID exclusivo (#) para o cabeçalho */
+#cabecalho-principal {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 24px 16px;
+    text-align: center;
+    border-bottom: 4px solid #3b82f6;
+}
+
+#cabecalho-principal h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+#cabecalho-principal nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#cabecalho-principal nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#cabecalho-principal nav a:hover {
+    color: #3b82f6;
+}
+
+/* Conteúdo Principal e Box Model (padding, border, margin) */
+main {
+    max-width: 850px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.destaque-noticia {
+    background-color: #ffffff;
+    padding: 32px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.destaque-noticia h2 {
+    font-size: 1.75rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.destaque-noticia p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.destaque-noticia img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.destaque-noticia h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.destaque-noticia ul {
+    margin-left: 24px;
+    margin-bottom: 28px;
+}
+
+.destaque-noticia li {
+    margin-bottom: 8px;
+}
+
+/* Classe reutilizável (.) para o botão de ação */
+.btn-acao {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid #1d4ed8;
+    border-radius: 6px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-acao:hover {
+    background-color: rgba(37, 99, 235, 0.85);
+}
+
+/* Rodapé */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 2px solid #1e293b;
+}
+
+/* Responsividade para celulares (Media Query) */
+@media (max-width: 600px) {
+    #cabecalho-principal h1 {
+        font-size: 1.75rem;
+    }
+
+    #cabecalho-principal nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .destaque-noticia {
+        padding: 20px;
+    }
+
+    .destaque-noticia h2 {
+        font-size: 1.4rem;
+    }
+
+    .btn-acao {
+        display: block;
+        width: 100%;
+    }
+}
